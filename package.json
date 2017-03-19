@@ -8,23 +8,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EROIN/ReactNativeSemiCircularProgressChart.git"
+    "url": "git+https://github.com/EROIN/ReactNativeSemiCircularGauge.git"
   },
   "keywords": [
     "react",
     "react-native",
     "gauge",
-    "component",
     "semi",
     "circular",
     "semi-circular",
-    "chart",
-    "progress"
+    "progress",
+    "component",
+    "chart"
   ],
   "author": "Eroin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EROIN/ReactNativeSemiCircularProgressChart/issues"
+    "url": "https://github.com/EROIN/ReactNativeSemiCircularGauge/issues"
   },
-  "homepage": "https://github.com/EROIN/ReactNativeSemiCircularProgressChart#readme"
+  "homepage": "https://github.com/EROIN/ReactNativeSemiCircularGauge#readme"
 }
