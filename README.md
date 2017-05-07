@@ -21,8 +21,8 @@ And then in your render method:
 
 ```jsx
 <AnimatedSemiCircularGauge
-    size={100}
-    graphWidth={10}
+    chartWidth={100}
+    strokeWidth={10}
     fill={20}
     prefill={-50}/>
 ```
