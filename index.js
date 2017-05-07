@@ -1,3 +1,3 @@
-import AnimatedCircularProgress from './src/AnimatedCircularProgress';
+import AnimatedSemiCircularGauge from './src/AnimatedSemiCircularGauge';
 
-export default AnimatedCircularProgress;
+export default AnimatedSemiCircularGauge;

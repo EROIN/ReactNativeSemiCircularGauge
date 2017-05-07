@@ -1,10 +1,10 @@
 import React, { PropTypes, Component } from 'react';
 import { View, Animated } from 'react-native';
 
-import CircularProgress from './CircularProgress';
-const AnimatedProgress = Animated.createAnimatedComponent(CircularProgress);
+import SemiCircularGauge from './SemiCircularGauge';
+const AnimatedProgress = Animated.createAnimatedComponent(SemiCircularGauge);
 
-export default class AnimatedCircularProgress extends Component {
+export default class AnimatedSemiCircularGauge extends Component {
 
   constructor(props) {
     super(props);
@@ -44,20 +44,19 @@ export default class AnimatedCircularProgress extends Component {
           />
       )
   }
-
 }
 
-AnimatedCircularProgress.propTypes = {
+AnimatedSemiCircularGauge.propTypes = {
   style: View.propTypes.style,
   size: PropTypes.number.isRequired,
   fill: PropTypes.number.isRequired,
   prefill: PropTypes.number,
-  width: PropTypes.number.isRequired,
+  graphWidth: PropTypes.number.isRequired,
   tension: PropTypes.number,
   friction: PropTypes.number
 }
 
-AnimatedCircularProgress.defaultProps = {
+AnimatedSemiCircularGauge.defaultProps = {
   tension: 1,
   friction: 6,
 };
