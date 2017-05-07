@@ -2,6 +2,8 @@
 React Native component for displaying semi circular gauge, with animation. **Works on both iOS & Android.**
 
 You might also be interested in [my blogs]( https://crazysigma.com/blogs/).
+
+
 ### Installation
 ```bash
 npm install react-native-semi-circular-gauge
