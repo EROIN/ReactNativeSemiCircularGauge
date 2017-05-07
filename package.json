@@ -1,6 +1,6 @@
 {
   "name": "react-native-semi-circular-gauge",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Component for displaying semi circular gauge, with animation",
   "main": "index.js",
   "scripts": {
