@@ -48,10 +48,10 @@ export default class AnimatedSemiCircularGauge extends Component {
 
 AnimatedSemiCircularGauge.propTypes = {
   style: View.propTypes.style,
-  size: PropTypes.number.isRequired,
+  chartWidth: PropTypes.number.isRequired,
   fill: PropTypes.number.isRequired,
   prefill: PropTypes.number,
-  graphWidth: PropTypes.number.isRequired,
+  strokeWidth: PropTypes.number.isRequired,
   tension: PropTypes.number,
   friction: PropTypes.number
 }

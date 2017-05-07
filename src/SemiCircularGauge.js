@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import { View, Platform, Text } from 'react-native';
-import { Surface, Shape, Path, Group } from '../../react-native/Libraries/ART/ReactNativeART';
+import { Surface, Shape, Path, Group } from 'ReactNativeART';
 
 export default class SemiCircularGauge extends Component {
 
@@ -23,47 +23,47 @@ export default class SemiCircularGauge extends Component {
     }
     else
     {
-      p.path.push(4, cx, cy, r, startDegree * Math.PI / 180, ((startDegree - endDegree) * multiplier) * Math.PI / 180, clockWise === 1? clockWise-1: (clockWise));
+      p.path.push(4, cx, cy, r, startDegree * Math.PI / 180, ((startDegree - endDegree) * multiplier) * Math.PI / 180, 0);
     }
     return p;
   }
 
   drawChartPath()
   {
-    const { size, graphWidth, fill, style } = this.props;
+    const { chartWidth, strokeWidth, fill, style } = this.props;
     const purgedFill = this.extractFill(fill);
 
     let graph;
     let chartPath, chartColor;
-    const backgroundPath = this.getPath(size / 2, size / 2, size / 2 - graphWidth / 2, 0, 180, 1);
+    const backgroundPath = this.getPath(chartWidth / 2, chartWidth / 2, chartWidth / 2 - strokeWidth / 2, 0, 180, 1);
 
     if(purgedFill<0)
     {
-      chartPath = this.getPath(size / 2, size / 2, size / 2 - graphWidth / 2, 0, 90 * Math.abs(purgedFill)*2 / 100, 0);
+      chartPath = this.getPath(chartWidth / 2, chartWidth / 2, chartWidth / 2 - strokeWidth / 2, 0, 90 * Math.abs(purgedFill)*2 / 100, 0);
       chartColor = "rgb(245,40,55)"
     }
     else
     {
-      chartPath = this.getPath(size / 2, size / 2, size / 2 - graphWidth / 2, 0, 90 * Math.abs(purgedFill)*2 / 100, 1);
+      chartPath = this.getPath(chartWidth / 2, chartWidth / 2, chartWidth / 2 - strokeWidth / 2, 0, 90 * Math.abs(purgedFill)*2 / 100, 1);
       chartColor = "rgb(120,200,65)"
     }
 
     return(
       <Surface
-        width={size}
-        height={size/2}>
-          <Group rotation={180} originX={size/2} originY={size/2}>
+        width={chartWidth}
+        height={chartWidth/2}>
+          <Group rotation={180} originX={chartWidth/2} originY={chartWidth/2}>
             <Shape
               d={backgroundPath}
               stroke="rgba(225,235,235,1)"
-              strokeWidth={graphWidth}/>
+              strokeWidth={strokeWidth}/>
           </Group>
-          <Group rotation={270} originX={size/2} originY={size/2}>
+          <Group rotation={270} originX={chartWidth/2} originY={chartWidth/2}>
             <Shape
               d={chartPath}
               stroke={chartColor}
               strokeCap="butt"
-              strokeWidth={graphWidth}/>
+              strokeWidth={strokeWidth}/>
           </Group>
       </Surface>
     )
@@ -98,7 +98,7 @@ export default class SemiCircularGauge extends Component {
 
 SemiCircularGauge.propTypes = {
   style: View.propTypes.style,
-  size: PropTypes.number.isRequired,
+  chartWidth: PropTypes.number.isRequired,
   fill: PropTypes.number.isRequired,
-  graphWidth: PropTypes.number.isRequired
+  strokeWidth: PropTypes.number.isRequired
 }

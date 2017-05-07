@@ -3,10 +3,10 @@
 
 ### Installation
 ```bash
-npm install react-native-carousel
+npm install react-native-semi-circular-gauge
 ```
 
-Then link the ART library found in `node_modules/react-native/Libraries/ART/ART.xcodeproj`  to your xcode project. (More info: ```https://facebook.github.io/react-native/docs/linking-libraries-ios.html``` )
+Then link the ART library found in `node_modules/react-native/Libraries/ART/ART.xcodeproj`  to your xcode project. ([More info:] (https://facebook.github.io/react-native/docs/linking-libraries-ios.html( )
 
 ## Usage
 
@@ -32,7 +32,7 @@ size | Number | Yes | None | width of the chart, height is determined automatica
 fill | Number | Yes | None | amount of the chart to be filled
 prefill | Number | No | 0 | starting point for the chart that is filled till props.fill
 width | Number | Yes | None | width of the stroke that is used to draw the chart
-tension | Number | Yes | RNdefault | used by the animated chart component [more info here]( https://facebook.github.io/react-native/docs/animations.html) 
+tension | Number | Yes | RNdefault | used by the animated chart component [more info]( https://facebook.github.io/react-native/docs/animations.html)
 friction | Number | Yes | RNdefault | used by the animated chart component
 
 ## License
