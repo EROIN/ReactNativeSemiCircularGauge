@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import { View, Platform, Text } from 'react-native';
-import { Surface, Shape, Path, Group } from 'ReactNativeART';
+import { Surface, Shape, Path, Group } from '../../react-native/Libraries/ART/ReactNativeART';
 
 export default class SemiCircularGauge extends Component {
 
